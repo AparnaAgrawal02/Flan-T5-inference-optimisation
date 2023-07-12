@@ -21,6 +21,7 @@
     3. Name: transformers Version: 4.29.2
     4. Name: protobuf Version: 4.23.1
 
+Comparesd results on 1080 ti and T4 Tesla :https://understood-casquette-cdf.notion.site/results-94e3e9f59e9d4fa8926ee13755bc2c88?pvs=4
 
 # Results
 # original
