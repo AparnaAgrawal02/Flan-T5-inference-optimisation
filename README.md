@@ -74,7 +74,15 @@
       seq_len: 128 time: 0.30130538940429685  
       seq_len: 512 time: 0.3012810492515564  
       seq_len: 1024 time: 0.30131051540374754  
+# ONNX + CUDA
+### output  MAX len → 5  
+**For FlanT5 large: onnx - Cuda**
 
+    seq_len:  8 time:  0.0640825286056056
+    seq_len: 32 time:  0.06121446869590066   
+    seq_len: 128 time: 0.0765363568007344
+    seq_len: 512 time: 0.12337033435551807
+    seq_len: 1024 time: 0.22687000939340302 
 # ONNX + Tensorrt
 ### output  MAX len → 5  
 **For FlanT5 large: onnx - tensorRt**
