@@ -98,3 +98,4 @@
         seq_len: 32 time: 0.2116452622413635  
         seq_len: 128 time: 2.117751100063324  
         seq_len: 512 time: 2.260249288082123  
+Comparesd results on 1080 ti and T4 Tesla :https://understood-casquette-cdf.notion.site/results-94e3e9f59e9d4fa8926ee13755bc2c88?pvs=4
