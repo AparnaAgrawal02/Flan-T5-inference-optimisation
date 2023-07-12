@@ -21,12 +21,10 @@
     3. Name: transformers Version: 4.29.2
     4. Name: protobuf Version: 4.23.1
 
-Comparesd results on 1080 ti and T4 Tesla :https://understood-casquette-cdf.notion.site/results-94e3e9f59e9d4fa8926ee13755bc2c88?pvs=4
-
 # Results
 # original
 ### output  MAX len → 1024
-**1. For Flan-T5 large: orignal (CPU) :**
+**1. For Flan-T5 large: orignal (12 CPUs) :**
 
         seq_len:  8 time:  0.7163788008689881
         seq_len: 32 time: 0.7263164758682251
@@ -42,7 +40,7 @@ Comparesd results on 1080 ti and T4 Tesla :https://understood-casquette-cdf.noti
         seq_len: 1024 time: 0.29372969150543216
 
 ### output  MAX len → 5  
-**1. For Flan-T5 large: orignal (CPU) :**
+**1. For Flan-T5 large: orignal (12 CPUs) :**
 
         seq_len: 8 time: 0.4637493824958801  
         seq_len: 32 time: 0.4152503275871277  
@@ -60,7 +58,7 @@ Comparesd results on 1080 ti and T4 Tesla :https://understood-casquette-cdf.noti
 
 # Onnx
 ### output  MAX len → 1024  
-**1. For Flan-T5 large: onnx (CPU):**  
+**1. For Flan-T5 large: onnx (12 CPUs):**  
 
         seq_len:  8 time:  0.5394865775108337  
         seq_len: 32 time: 0.5388318037986756  
@@ -88,15 +86,17 @@ Comparesd results on 1080 ti and T4 Tesla :https://understood-casquette-cdf.noti
     seq_len: 1024 time: 1st -iter: 165.788,   rest: 0.4750   
 
 # CTranslate2
-    1. C2 translate(cpu)  
+    1. C2 translate(12 cpus) -> 5
 
-        seq_len: 8 time: 0.6379863619804382  
-        seq_len: 32 time: 1.165667852342340   
+        seq_len: 8 time: 0.4590617847442627  
+        seq_len: 32 time: 0.4289630079269409
+         seq_len: 128 time:0.6012817811965943
+        seq_len: 512 time:1.384908185005188
 
     2. Ctranslate2(gpu)  
 
-        seq_len: 8 time: 0.06818238019943237  
-        seq_len: 32 time: 0.2116452622413635  
-        seq_len: 128 time: 2.117751100063324  
-        seq_len: 512 time: 2.260249288082123  
+        seq_len: 8 time:  0.042198596000671384 
+        seq_len: 32 time: 0.044256911277771
+        seq_len: 128 time: 0.06652774572372437
+        seq_len: 512 time: 0.15909862756729126 
 Comparesd results on 1080 ti and T4 Tesla :https://understood-casquette-cdf.notion.site/results-94e3e9f59e9d4fa8926ee13755bc2c88?pvs=4
